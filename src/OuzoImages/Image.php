@@ -31,10 +31,10 @@ class Image
         return new self($image, strtolower($imageType));
     }
 
-    public static function createBlank($width, $height)
+    public static function createBlank($width, $height, $imageType = 'image/jpg')
     {
         $image = imagecreatetruecolor($width, $height);
-        return new self($image);
+        return new self($image, $imageType);
     }
 
     public function __construct($image, $imageType = null)
@@ -46,6 +46,11 @@ class Image
     public function getImage()
     {
         return $this->_image;
+    }
+
+    public function getImageType()
+    {
+        return $this->_imageType;
     }
 
     public function getWidth()
@@ -71,6 +76,14 @@ class Image
     public function setText($string, $x, $y, $color = 0x0000FF)
     {
         imagestring($this->_image, $this->_font, $x, $y, $string, $color);
+        return $this;
+    }
+
+    public function resize($width, $height)
+    {
+        $newImage = imagecreatetruecolor($width, $height);
+        imagecopyresampled($newImage, $this->getImage(), 0, 0, 0, 0, $width, $height, $this->getWidth(), $this->getHeight());
+        $this->_image = $newImage;
         return $this;
     }
 
