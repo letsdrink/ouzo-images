@@ -7,8 +7,8 @@ require_once '../vendor/autoload.php';
 $image = Image::createFromFile('daenerys.jpg');
 $watermarkImage = Image::createBlank($image->getWidth(), 50);
 $watermarkImage
-    ->setFont(4)
-    ->setText('fotogenesis.pl', 20, 20, 0xDA9A9B);
+    ->setFont(6)
+    ->setText('sample text', 100, 20, 0xDA9A9B);
 
 $watermark = new Watermark($watermarkImage);
 $watermark
