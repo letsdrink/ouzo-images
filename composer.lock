@@ -1,0 +1,69 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
+    ],
+    "hash": "4293ca09c7cd85ef502c028be629df82",
+    "packages": [
+
+    ],
+    "packages-dev": [
+        {
+            "name": "letsdrink/ouzo",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/letsdrink/ouzo.git",
+                "reference": "d1f4eebc6d7de69d2058b8f10c7564ca49887944"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/letsdrink/ouzo/zipball/d1f4eebc6d7de69d2058b8f10c7564ca49887944",
+                "reference": "d1f4eebc6d7de69d2058b8f10c7564ca49887944",
+                "shasum": ""
+            },
+            "require-dev": {
+                "phpunit/phpunit": "3.7.27",
+                "satooshi/php-coveralls": "dev-master"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Ouzo": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Thulium",
+                    "email": "letsdrink@thulium.pl"
+                }
+            ],
+            "description": "Ouzo PHP MVC framework",
+            "keywords": [
+                "TDD",
+                "framework",
+                "mvc",
+                "orm",
+                "php"
+            ],
+            "time": "2013-10-04 17:45:50"
+        }
+    ],
+    "aliases": [
+
+    ],
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "letsdrink/ouzo": 20
+    },
+    "platform": [
+
+    ],
+    "platform-dev": [
+
+    ]
+}
