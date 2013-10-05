@@ -1,0 +1,19 @@
+{
+    "name": "letsdrink/ouzo-images",
+    "description": "Plugin for Ouzo to manipulating images use PHP GD extension",
+    "minimum-stability": "dev",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Piotr Olaszewski"
+        }
+    ],
+    "require-dev": {
+        "letsdrink/ouzo": "dev-master"
+    },
+    "autoload": {
+        "psr-0": {
+            "OuzoImages\\": "src/"
+        }
+    }
+}
