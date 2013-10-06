@@ -87,7 +87,7 @@ class Image
         return $this;
     }
 
-    public function save($fileName, $type = null)
+    public function save($fileName = null, $type = null)
     {
         $imageType = $type ? : $this->_imageType;
         if ($imageType == 'image/gif') {
