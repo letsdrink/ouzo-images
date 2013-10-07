@@ -7,6 +7,7 @@ Configuration
 -------------
 
 1. Install via [composer](http://getcomposer.org/)
+2. Required PHP-GD extension
 
 Usage
 -----
