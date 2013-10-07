@@ -65,17 +65,17 @@ class Image
 
     public function setFont($font = 3)
     {
-        if (is_numeric($font)) {
-            $this->_font = $font;
-        } else {
-            $this->_font = imageloadfont($font);
-        }
+        $this->_font = $font;
         return $this;
     }
 
-    public function setText($string, $x, $y, $color = 0x0000FF)
+    public function setText($string, $x, $y, $color = 0x0000FF, $size = 20)
     {
-        imagestring($this->_image, $this->_font, $x, $y, $string, $color);
+        if (is_numeric($this->_font)) {
+            imagestring($this->_image, $this->_font, $x, $y, $string, $color);
+        } else {
+            imagettftext($this->_image, $size, 0, $x, $y, $color, $this->_font, $string);
+        }
         return $this;
     }
 
