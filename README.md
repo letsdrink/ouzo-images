@@ -1,13 +1,13 @@
 Ouzo images plugin
 =======================
 
-Plugin for Ouzo to manipulating images use PHP GD extension.
+Plugin for Ouzo to manipulate images use PHP GD extension.
 
 Configuration
 -------------
 
 1. Install via [composer](http://getcomposer.org/)
-2. Required PHP-GD extension
+2. PHP-GD extension is required.
 
 Usage
 -----
@@ -27,8 +27,8 @@ Methods summary
 
 ### static
 ```
-  Image::createFromFile($file) - generating image from file
-  Image::createBlank($width, $height) - generating blank image about specific dimensions
+  Image::createFromFile($file) - generate image from file
+  Image::createBlank($width, $height) - generate blank image with specified dimensions
 ```
 
 ### non-static
@@ -37,10 +37,10 @@ Methods summary
   Image::getImageType() - image mime type
   Image::getWidth()
   Image::getHeight()
-  Image::setFont($font) - is is numeric use imagestring or path to ttf font use imagettftext
-  Image::setText($string, $x, $y, $color = 0x0000FF, $size = 20) - writes string on image, if set font is ttf use $size to set size image
+  Image::setFont($font) - use imagestring or path to ttf font use imagettftext
+  Image::setText($string, $x, $y, $color = 0x0000FF, $size = 20) - writes string on image, if set font is ttf use $size to set image size
   Image::resize($width, $height)
-  Image::save($filename, $type) - if set $filename image save in defined file otherwise render image
+  Image::save($filename, $type) - if set $filename image is saved in defined file otherwise render image
   
   Watermark::appendToImage(Image $image, $x = 0, $y = 0, $opacity = 50) - append watermark to passed $image
   Watermark::save($filename)
